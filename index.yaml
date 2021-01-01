@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  simple-web-app:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-01-01T21:51:06.451129+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 9952ae92b329c0435ee7b20abcd819729aed8075924f3396e02d73afd0bab0db
+    name: simple-web-app
+    type: application
+    urls:
+    - https://github.com/ajay253517/py-code/releases/download/simple-web-app-0.1.0/simple-web-app-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-01-01T21:51:06.053114+05:30"
