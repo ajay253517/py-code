@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "simple-web-app.fullname" . }}-test-connection"
+  labels:
+    {{- include "simple-web-app.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: ajaypb1122/ubntucurl:v1
+      command: ['curl']
+      args: ['{{ include "simple-web-app.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
